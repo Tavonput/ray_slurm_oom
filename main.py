@@ -198,31 +198,37 @@ def parse_args():
     parser.add_argument(
         "--array_size",
         default=100 * MB,
+        type=int,
         help="Size of transfer array. default=100MB",
     )
     parser.add_argument(
         "--obj_store_mem",
         default=10 * GB,
+        type=int,
         help="Size of ray object store. Ray recommends 30% of total memory. default=10GB",
     )
     parser.add_argument(
         "--timeout",
         default=1000,
+        type=int,
         help="How long the main process will wait for the server to finish in seconds. default=1000",
     )
     parser.add_argument(
         "--poll_int",
         default=1,
+        type=int,
         help="Polling interval for the main process to check on the server status in seconds. default=1",
     )
     parser.add_argument(
         "--clients",
         default=10,
+        type=int,
         help="Number of clients. default=10",
     )
     parser.add_argument(
         "--rounds",
         default=20,
+        type=int,
         help="Number of rounds. default=20",
     )
 
